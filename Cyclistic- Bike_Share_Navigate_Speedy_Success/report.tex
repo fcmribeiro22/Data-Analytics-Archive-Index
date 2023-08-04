@@ -1,0 +1,468 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage[margin=1in]{geometry}
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  pdftitle={How does a bike-share navigate speedy success?},
+  pdfauthor={Fábio Ribeiro},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{How does a bike-share navigate speedy success?}
+\author{Fábio Ribeiro}
+\date{2023-08-03}
+
+\begin{document}
+\maketitle
+
+\hypertarget{introduction}{%
+\section{Introduction}\label{introduction}}
+
+Welcome to the Cyclistic bike-share analysis case study. In this
+analysis, we will explore the historical bike trip data provided by
+Cyclistic and aim to answer key business questions that will guide our
+marketing strategy.
+
+\hypertarget{business-problem}{%
+\subsection{Business Problem}\label{business-problem}}
+
+The marketing team aims to maximize annual memberships. To achieve this,
+we need to analyze the differences between casual riders and annual
+members, identify potential conversion opportunities, and design
+effective marketing strategies.
+
+\hypertarget{data-acquisition}{%
+\subsection{Data Acquisition}\label{data-acquisition}}
+
+We have gathered 10 months of bike trip data from April 2020 to January
+2021, available to download
+\href{https://divvy-tripdata.s3.amazonaws.com/index.html}{here} combined
+them into a single dataset. We have cleaned and preprocessed the data to
+ensure its quality.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Data Acquisition and Pre{-}processing}
+
+\CommentTok{\# Load required packages}
+\FunctionTok{library}\NormalTok{(tidyverse)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## -- Attaching core tidyverse packages ------------------------ tidyverse 2.0.0 --
+## v dplyr     1.1.2     v readr     2.1.4
+## v forcats   1.0.0     v stringr   1.5.0
+## v ggplot2   3.4.2     v tibble    3.2.1
+## v lubridate 1.9.2     v tidyr     1.3.0
+## v purrr     1.0.1     
+## -- Conflicts ------------------------------------------ tidyverse_conflicts() --
+## x dplyr::filter() masks stats::filter()
+## x dplyr::lag()    masks stats::lag()
+## i Use the conflicted package (<http://conflicted.r-lib.org/>) to force all conflicts to become errors
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(lubridate)}
+\FunctionTok{library}\NormalTok{(janitor)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+## Attaching package: 'janitor'
+## 
+## The following objects are masked from 'package:stats':
+## 
+##     chisq.test, fisher.test
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Load and combine data}
+\NormalTok{df1 }\OtherTok{\textless{}{-}} \FunctionTok{read.csv}\NormalTok{(}\StringTok{"./Bike{-}Share{-}Navigate{-}Speedy{-}Success/Data/202004{-}divvy{-}tripdata.csv"}\NormalTok{)}
+\NormalTok{df2 }\OtherTok{\textless{}{-}} \FunctionTok{read.csv}\NormalTok{(}\StringTok{"./Bike{-}Share{-}Navigate{-}Speedy{-}Success/Data/202005{-}divvy{-}tripdata.csv"}\NormalTok{)}
+\NormalTok{df3 }\OtherTok{\textless{}{-}} \FunctionTok{read.csv}\NormalTok{(}\StringTok{"./Bike{-}Share{-}Navigate{-}Speedy{-}Success/Data/202006{-}divvy{-}tripdata.csv"}\NormalTok{)}
+\NormalTok{df4 }\OtherTok{\textless{}{-}} \FunctionTok{read.csv}\NormalTok{(}\StringTok{"./Bike{-}Share{-}Navigate{-}Speedy{-}Success/Data/202007{-}divvy{-}tripdata.csv"}\NormalTok{)}
+\NormalTok{df5 }\OtherTok{\textless{}{-}} \FunctionTok{read.csv}\NormalTok{(}\StringTok{"./Bike{-}Share{-}Navigate{-}Speedy{-}Success/Data/202008{-}divvy{-}tripdata.csv"}\NormalTok{)}
+\NormalTok{df6 }\OtherTok{\textless{}{-}} \FunctionTok{read.csv}\NormalTok{(}\StringTok{"./Bike{-}Share{-}Navigate{-}Speedy{-}Success/Data/202009{-}divvy{-}tripdata.csv"}\NormalTok{)}
+\NormalTok{df7 }\OtherTok{\textless{}{-}} \FunctionTok{read.csv}\NormalTok{(}\StringTok{"./Bike{-}Share{-}Navigate{-}Speedy{-}Success/Data/202010{-}divvy{-}tripdata.csv"}\NormalTok{)}
+\NormalTok{df8 }\OtherTok{\textless{}{-}} \FunctionTok{read.csv}\NormalTok{(}\StringTok{"./Bike{-}Share{-}Navigate{-}Speedy{-}Success/Data/202011{-}divvy{-}tripdata.csv"}\NormalTok{)}
+\NormalTok{df9 }\OtherTok{\textless{}{-}} \FunctionTok{read.csv}\NormalTok{(}\StringTok{"./Bike{-}Share{-}Navigate{-}Speedy{-}Success/Data/202012{-}divvy{-}tripdata.csv"}\NormalTok{)}
+\NormalTok{df10 }\OtherTok{\textless{}{-}} \FunctionTok{read.csv}\NormalTok{(}\StringTok{"./Bike{-}Share{-}Navigate{-}Speedy{-}Success/Data/202101{-}divvy{-}tripdata.csv"}\NormalTok{)}
+\NormalTok{bike\_rides }\OtherTok{\textless{}{-}} \FunctionTok{rbind}\NormalTok{(df1, df2, df3, df4, df5, df6, df7, df8, df9, df10)}
+
+\CommentTok{\# Clean data}
+\NormalTok{bike\_rides }\OtherTok{\textless{}{-}}\NormalTok{ janitor}\SpecialCharTok{::}\FunctionTok{remove\_empty}\NormalTok{(bike\_rides, }\AttributeTok{which =} \FunctionTok{c}\NormalTok{(}\StringTok{"cols"}\NormalTok{, }\StringTok{"rows"}\NormalTok{))}
+\NormalTok{bike\_rides }\OtherTok{\textless{}{-}}\NormalTok{ bike\_rides }\SpecialCharTok{\%\textgreater{}\%} \FunctionTok{distinct}\NormalTok{()}
+
+\CommentTok{\# Clean environment}
+\FunctionTok{rm}\NormalTok{(df1, df2, df3, df4, df5, df6, df7, df8, df9, df10)}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{data-analysis}{%
+\subsection{Data Analysis}\label{data-analysis}}
+
+Now that we have prepared the data, we can start analyzing it to gain
+insights into user behavior and usage patterns.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\DocumentationTok{\#\#\#make a copy for further analysis {-} bike\_rides\_2 is cleaned.}
+\NormalTok{bike\_rides\_2 }\OtherTok{\textless{}{-}}\NormalTok{bike\_rides}
+
+\DocumentationTok{\#\#Create ride length, hour and date field}
+\NormalTok{bike\_rides\_2}\SpecialCharTok{$}\NormalTok{start\_hour }\OtherTok{\textless{}{-}}\NormalTok{ lubridate}\SpecialCharTok{::}\FunctionTok{hour}\NormalTok{(bike\_rides\_2}\SpecialCharTok{$}\NormalTok{started\_at)}
+\NormalTok{bike\_rides\_2}\SpecialCharTok{$}\NormalTok{end\_hour }\OtherTok{\textless{}{-}}\NormalTok{ lubridate}\SpecialCharTok{::}\FunctionTok{hour}\NormalTok{(bike\_rides\_2}\SpecialCharTok{$}\NormalTok{ended\_at)}
+\NormalTok{bike\_rides\_2}\SpecialCharTok{$}\NormalTok{start\_date }\OtherTok{\textless{}{-}}\NormalTok{ lubridate}\SpecialCharTok{::}\FunctionTok{date}\NormalTok{(bike\_rides\_2}\SpecialCharTok{$}\NormalTok{started\_at)}
+\NormalTok{bike\_rides\_2}\SpecialCharTok{$}\NormalTok{end\_date }\OtherTok{\textless{}{-}}\NormalTok{ lubridate}\SpecialCharTok{::}\FunctionTok{date}\NormalTok{(bike\_rides\_2}\SpecialCharTok{$}\NormalTok{ended\_at)}
+\NormalTok{bike\_rides\_2}\SpecialCharTok{$}\NormalTok{ride\_length }\OtherTok{\textless{}{-}}\FunctionTok{difftime}\NormalTok{(bike\_rides\_2}\SpecialCharTok{$}\NormalTok{ended\_at,bike\_rides\_2}\SpecialCharTok{$}\NormalTok{started\_at, }\AttributeTok{units=}\StringTok{"mins"}\NormalTok{)}
+
+\DocumentationTok{\#\#\#The raw data also contains unneeded data such as ride IDs, station IDs, and}
+\DocumentationTok{\#\#latitude and longitude coordinates ,}
+\CommentTok{\#remove rows where ride\_length is \textless{}= to zero}
+\NormalTok{bike\_rides\_2 }\OtherTok{\textless{}{-}}\NormalTok{ bike\_rides\_2[}\SpecialCharTok{!}\NormalTok{(bike\_rides\_2}\SpecialCharTok{$}\NormalTok{ride\_length }\SpecialCharTok{\textless{}=}\DecValTok{0}\NormalTok{),]}
+\CommentTok{\#remove unneeded columns}
+\NormalTok{bike\_rides\_2 }\OtherTok{\textless{}{-}}\NormalTok{ bike\_rides\_2 }\SpecialCharTok{\%\textgreater{}\%}  
+  \FunctionTok{select}\NormalTok{(}\SpecialCharTok{{-}}\FunctionTok{c}\NormalTok{(ride\_id, start\_station\_id, end\_station\_id, start\_lat, start\_lng, end\_lat, end\_lng))}
+
+\DocumentationTok{\#\#Rename column name "member\_casual" since there is two possible values, casual and member.}
+\NormalTok{bike\_rides\_2 }\OtherTok{\textless{}{-}}\NormalTok{ bike\_rides\_2 }\SpecialCharTok{\%\textgreater{}\%} 
+  \FunctionTok{rename}\NormalTok{(}\AttributeTok{member\_type =}\NormalTok{ member\_casual)}
+
+\CommentTok{\#convert ride\_length to numeric}
+\NormalTok{bike\_rides\_2}\SpecialCharTok{$}\NormalTok{ride\_length }\OtherTok{\textless{}{-}} \FunctionTok{as.numeric}\NormalTok{(}\FunctionTok{as.character}\NormalTok{(bike\_rides\_2}\SpecialCharTok{$}\NormalTok{ride\_length))}
+\end{Highlighting}
+\end{Shaded}
+
+We will examine the hourly usage patterns of casual riders and annual
+members.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\DocumentationTok{\#\#\#PLOT {-} number of rides per hour}
+\NormalTok{bike\_rides\_2 }\SpecialCharTok{\%\textgreater{}\%} \FunctionTok{count}\NormalTok{(start\_hour, }\AttributeTok{sort=} \ConstantTok{TRUE}\NormalTok{) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{ggplot}\NormalTok{()}\SpecialCharTok{+}
+  \FunctionTok{geom\_line}\NormalTok{((}\FunctionTok{aes}\NormalTok{(}\AttributeTok{x=}\NormalTok{start\_hour,}\AttributeTok{y=}\NormalTok{n)))}\SpecialCharTok{+}
+  \FunctionTok{labs}\NormalTok{(}\AttributeTok{title=}\StringTok{"Count of Bike Rides by Hour: Previous 10 months"}\NormalTok{, }\AttributeTok{x=}\StringTok{"Start Hours"}\NormalTok{, }\AttributeTok{y=}\StringTok{"Number of Rides"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{report_files/figure-latex/unnamed-chunk-4-1.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\#converts values from scientific notation }
+\FunctionTok{options}\NormalTok{(}\AttributeTok{scipen =} \DecValTok{999}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+As we can see, there is a obvious decline during night hours, with
+maximum volume at around 17h.
+
+The total number of rides in this dataset was 3200708.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{nrow}\NormalTok{(bike\_rides\_2)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 3200708
+\end{verbatim}
+
+There was 1332801 casual rides and 1867907 member during this period.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\DocumentationTok{\#\#count by member type}
+\NormalTok{bike\_rides\_2 }\SpecialCharTok{\%\textgreater{}\%} \FunctionTok{count}\NormalTok{(member\_type)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##   member_type       n
+## 1      casual 1332801
+## 2      member 1867907
+\end{verbatim}
+
+Regarding the type of bike, docked bikes takes the front with 2530905
+rides, followed by electric bikes with 537492 rides, while classic bikes
+coming last at 132311 bike rides.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\#total rides by bike type}
+\NormalTok{bike\_rides\_2 }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{group\_by}\NormalTok{(rideable\_type) }\SpecialCharTok{\%\textgreater{}\%} 
+  \FunctionTok{count}\NormalTok{(rideable\_type)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## # A tibble: 3 x 2
+## # Groups:   rideable_type [3]
+##   rideable_type       n
+##   <chr>           <int>
+## 1 classic_bike   132311
+## 2 docked_bike   2530905
+## 3 electric_bike  537492
+\end{verbatim}
+
+Here is a plot to better visualize this data.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{bike\_rides\_2 }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{group\_by}\NormalTok{(rideable\_type, member\_type) }\SpecialCharTok{\%\textgreater{}\%}
+\NormalTok{  dplyr}\SpecialCharTok{::}\FunctionTok{summarize}\NormalTok{(}\AttributeTok{count\_trips =} \FunctionTok{n}\NormalTok{()) }\SpecialCharTok{\%\textgreater{}\%}  
+  \FunctionTok{ggplot}\NormalTok{(}\FunctionTok{aes}\NormalTok{(}\AttributeTok{x=}\NormalTok{rideable\_type, }\AttributeTok{y=}\NormalTok{count\_trips, }\AttributeTok{fill=}\NormalTok{member\_type, }\AttributeTok{color=}\NormalTok{member\_type)) }\SpecialCharTok{+}
+  \FunctionTok{geom\_bar}\NormalTok{(}\AttributeTok{stat=}\StringTok{\textquotesingle{}identity\textquotesingle{}}\NormalTok{, }\AttributeTok{position=}\StringTok{\textquotesingle{}dodge\textquotesingle{}}\NormalTok{) }\SpecialCharTok{+}
+  \FunctionTok{theme\_bw}\NormalTok{()}\SpecialCharTok{+}
+  \FunctionTok{labs}\NormalTok{(}\AttributeTok{title=}\StringTok{"Number of Trips by Bicycle Type"}\NormalTok{, }\AttributeTok{x=}\StringTok{"Bicycle Type"}\NormalTok{, }\AttributeTok{y=}\StringTok{"Number of Rides"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## `summarise()` has grouped output by 'rideable_type'. You can override using the
+## `.groups` argument.
+\end{verbatim}
+
+\includegraphics{report_files/figure-latex/unnamed-chunk-8-1.pdf}
+
+The average ride during this period was 28.37 minutes while the median
+was 14.82 minutes.Note that the minimum and maximum values, 0,02 minutes
+and 58720.03 are not realistic so they are probably due to some external
+factor like data upload or some faulty equipment.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\#mean length of ride}
+\FunctionTok{summary}\NormalTok{(bike\_rides\_2}\SpecialCharTok{$}\NormalTok{ride\_length)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##     Min.  1st Qu.   Median     Mean  3rd Qu.     Max. 
+##     0.02     8.07    14.82    28.37    27.03 58720.03
+\end{verbatim}
+
+While we got already some hints for when we can enroll in a marketing
+campaign, like send a promotion to subscribe to casual users at the
+evening, that was showed when the most users will ride our bikes, and
+also focusing on docked bikes, let's see what data tells us regarding
+weekdays.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\#create column day\_of\_week }
+\NormalTok{bike\_rides\_2}\SpecialCharTok{$}\NormalTok{day\_of\_week }\OtherTok{\textless{}{-}} \FunctionTok{wday}\NormalTok{(bike\_rides\_2}\SpecialCharTok{$}\NormalTok{started\_at)}
+
+
+
+\CommentTok{\#plot number of rides by day of week (1 is Sunday)}
+\NormalTok{bike\_rides\_2 }\SpecialCharTok{\%\textgreater{}\%} 
+  \FunctionTok{group\_by}\NormalTok{(member\_type, day\_of\_week) }\SpecialCharTok{\%\textgreater{}\%}
+\NormalTok{  dplyr}\SpecialCharTok{::}\FunctionTok{summarize}\NormalTok{(}\AttributeTok{count\_trips =} \FunctionTok{n}\NormalTok{()) }\SpecialCharTok{\%\textgreater{}\%}  
+  \FunctionTok{ggplot}\NormalTok{(}\FunctionTok{aes}\NormalTok{(}\AttributeTok{x=}\NormalTok{ day\_of\_week, }\AttributeTok{y=}\NormalTok{count\_trips, }\AttributeTok{fill=}\NormalTok{member\_type, }\AttributeTok{color=}\NormalTok{member\_type)) }\SpecialCharTok{+}
+  \FunctionTok{geom\_bar}\NormalTok{(}\AttributeTok{stat=}\StringTok{\textquotesingle{}identity\textquotesingle{}}\NormalTok{, }\AttributeTok{position =} \StringTok{\textquotesingle{}dodge\textquotesingle{}}\NormalTok{) }\SpecialCharTok{+}
+  \FunctionTok{scale\_x\_continuous}\NormalTok{(}\AttributeTok{breaks =} \DecValTok{1}\SpecialCharTok{:}\DecValTok{7}\NormalTok{, }\AttributeTok{labels =} \FunctionTok{c}\NormalTok{(}\StringTok{"1"}\NormalTok{, }\StringTok{"2"}\NormalTok{, }\StringTok{"3"}\NormalTok{, }\StringTok{"4"}\NormalTok{, }\StringTok{"5"}\NormalTok{, }\StringTok{"6"}\NormalTok{, }\StringTok{"7"}\NormalTok{)) }\SpecialCharTok{+} 
+  \FunctionTok{theme\_bw}\NormalTok{()}\SpecialCharTok{+}
+  \FunctionTok{labs}\NormalTok{(}\AttributeTok{title =}\StringTok{"Number of Rides by Day of Week"}\NormalTok{, }\AttributeTok{x =} \StringTok{"Day of Week"}\NormalTok{, }\AttributeTok{y =} \StringTok{"Number of Rides"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## `summarise()` has grouped output by 'member_type'. You can override using the
+## `.groups` argument.
+\end{verbatim}
+
+\includegraphics{report_files/figure-latex/unnamed-chunk-10-1.pdf}
+
+Our most popular day is Saturday and least popular is monday, while most
+casual members use our bikes on weekends.
+
+What about popular stations for casual riders?
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\#Find popular start station for casual}
+\NormalTok{bike\_rides\_2 }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{group\_by}\NormalTok{(member\_type,start\_station\_name) }\SpecialCharTok{\%\textgreater{}\%}
+\NormalTok{  dplyr}\SpecialCharTok{::}\FunctionTok{summarise}\NormalTok{(}\AttributeTok{number\_of\_ride =} \FunctionTok{n}\NormalTok{()) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{filter}\NormalTok{(start\_station\_name }\SpecialCharTok{!=} \StringTok{""}\NormalTok{, }\StringTok{"casual"} \SpecialCharTok{==}\NormalTok{ member\_type) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{arrange}\NormalTok{(}\SpecialCharTok{{-}}\NormalTok{number\_of\_ride) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{head}\NormalTok{(}\AttributeTok{n=}\DecValTok{5}\NormalTok{) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{select}\NormalTok{(}\SpecialCharTok{{-}}\NormalTok{member\_type)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## `summarise()` has grouped output by 'member_type'. You can override using the
+## `.groups` argument.
+## Adding missing grouping variables: `member_type`
+\end{verbatim}
+
+\begin{verbatim}
+## # A tibble: 5 x 3
+## # Groups:   member_type [1]
+##   member_type start_station_name         number_of_ride
+##   <chr>       <chr>                               <int>
+## 1 casual      Streeter Dr & Grand Ave             24599
+## 2 casual      Lake Shore Dr & Monroe St           18689
+## 3 casual      Millennium Park                     17960
+## 4 casual      Theater on the Lake                 14143
+## 5 casual      Indiana Ave & Roosevelt Rd          12801
+\end{verbatim}
+
+``Streeter Dr \& Grave'', ``Lake Shore Dr'' and ``Millenium Park'' is
+our most popular stations for casual riders.
+
+\hypertarget{recommendations}{%
+\subsection{Recommendations}\label{recommendations}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  \textbf{Targeted Promotions:} Leverage the hourly usage patterns to
+  target specific timeframes for marketing promotions. Focus on the peak
+  usage hours, particularly around 17:00, when the number of rides is at
+  its highest. Consider sending promotions or discounts to casual riders
+  during these hours to encourage more rides and potentially convert
+  them to annual members.
+\item
+  \textbf{Weekend Campaigns:} Since Saturdays are the most popular days
+  for bike rides and weekends generally see higher casual rider
+  activity, design marketing campaigns that specifically target
+  weekends. Offering special weekend-only membership deals or incentives
+  can attract more riders during these days.
+\item
+  \textbf{Bike Type Emphasis:} Concentrate marketing efforts on docked
+  bikes, as they are the most frequently used bike type. Highlight the
+  benefits of docked bikes in marketing materials, showcasing their
+  availability and convenience, which might encourage more riders to
+  choose this type.
+\item
+  \textbf{Weekday Strategies:} Implement strategies to boost weekday
+  ridership, especially on Mondays when the usage is lower. Offer
+  special deals or incentives for rides on Mondays to attract more
+  riders on this typically less busy day.
+\item
+  \textbf{Station Improvement:} Focus on popular start stations like
+  ``Streeter Dr \& Grave,'' ``Lake Shore Dr,'' and ``Millennium Park.''
+  Ensure these stations are well-maintained, easily accessible, and have
+  a sufficient number of available bikes. Enhancing the user experience
+  at these stations can positively impact customer satisfaction and
+  loyalty.
+\end{enumerate}
+
+\hypertarget{conclusion}{%
+\subsection{Conclusion}\label{conclusion}}
+
+In this analysis, we explored Cyclistic's bike trip data and gained
+insights into user behavior. We identified key differences between
+casual riders and annual members and proposed strategies to increase
+annual memberships.
+
+\end{document}

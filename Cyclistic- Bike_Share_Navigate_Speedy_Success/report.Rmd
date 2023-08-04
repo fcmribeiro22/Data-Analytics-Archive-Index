@@ -1,0 +1,210 @@
+---
+title: "How does a bike-share navigate speedy success?"
+author: "Fábio Ribeiro"
+date: "2023-08-03"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Introduction
+
+Welcome to the Cyclistic bike-share analysis case study. In this analysis, we will explore the historical bike trip data provided by Cyclistic and aim to answer key business questions that will guide our marketing strategy.
+
+## Business Problem
+
+The marketing team aims to maximize annual memberships. To achieve this, we need to analyze the differences between casual riders and annual members, identify potential conversion opportunities, and design effective marketing strategies.
+
+## Data Acquisition
+
+We have gathered 10 months of bike trip data from April 2020 to January 2021, available to download [here]( https://divvy-tripdata.s3.amazonaws.com/index.html) combined them into a single dataset. We have cleaned and preprocessed the data to ensure its quality.
+
+
+```{r }
+# Data Acquisition and Pre-processing
+
+# Load required packages
+library(tidyverse)
+library(lubridate)
+library(janitor)
+
+```
+
+
+```{r}
+# Load and combine data
+df1 <- read.csv("./Bike-Share-Navigate-Speedy-Success/Data/202004-divvy-tripdata.csv")
+df2 <- read.csv("./Bike-Share-Navigate-Speedy-Success/Data/202005-divvy-tripdata.csv")
+df3 <- read.csv("./Bike-Share-Navigate-Speedy-Success/Data/202006-divvy-tripdata.csv")
+df4 <- read.csv("./Bike-Share-Navigate-Speedy-Success/Data/202007-divvy-tripdata.csv")
+df5 <- read.csv("./Bike-Share-Navigate-Speedy-Success/Data/202008-divvy-tripdata.csv")
+df6 <- read.csv("./Bike-Share-Navigate-Speedy-Success/Data/202009-divvy-tripdata.csv")
+df7 <- read.csv("./Bike-Share-Navigate-Speedy-Success/Data/202010-divvy-tripdata.csv")
+df8 <- read.csv("./Bike-Share-Navigate-Speedy-Success/Data/202011-divvy-tripdata.csv")
+df9 <- read.csv("./Bike-Share-Navigate-Speedy-Success/Data/202012-divvy-tripdata.csv")
+df10 <- read.csv("./Bike-Share-Navigate-Speedy-Success/Data/202101-divvy-tripdata.csv")
+bike_rides <- rbind(df1, df2, df3, df4, df5, df6, df7, df8, df9, df10)
+
+# Clean data
+bike_rides <- janitor::remove_empty(bike_rides, which = c("cols", "rows"))
+bike_rides <- bike_rides %>% distinct()
+
+# Clean environment
+rm(df1, df2, df3, df4, df5, df6, df7, df8, df9, df10)
+```
+
+## Data Analysis
+
+Now that we have prepared the data, we can start analyzing it to gain insights into user behavior and usage patterns.
+
+```{r}
+###make a copy for further analysis - bike_rides_2 is cleaned.
+bike_rides_2 <-bike_rides
+
+##Create ride length, hour and date field
+bike_rides_2$start_hour <- lubridate::hour(bike_rides_2$started_at)
+bike_rides_2$end_hour <- lubridate::hour(bike_rides_2$ended_at)
+bike_rides_2$start_date <- lubridate::date(bike_rides_2$started_at)
+bike_rides_2$end_date <- lubridate::date(bike_rides_2$ended_at)
+bike_rides_2$ride_length <-difftime(bike_rides_2$ended_at,bike_rides_2$started_at, units="mins")
+
+###The raw data also contains unneeded data such as ride IDs, station IDs, and
+##latitude and longitude coordinates ,
+#remove rows where ride_length is <= to zero
+bike_rides_2 <- bike_rides_2[!(bike_rides_2$ride_length <=0),]
+#remove unneeded columns
+bike_rides_2 <- bike_rides_2 %>%  
+  select(-c(ride_id, start_station_id, end_station_id, start_lat, start_lng, end_lat, end_lng))
+
+##Rename column name "member_casual" since there is two possible values, casual and member.
+bike_rides_2 <- bike_rides_2 %>% 
+  rename(member_type = member_casual)
+
+#convert ride_length to numeric
+bike_rides_2$ride_length <- as.numeric(as.character(bike_rides_2$ride_length))
+
+```
+
+
+We will examine the hourly usage patterns of casual riders and annual members.
+
+```{r}
+###PLOT - number of rides per hour
+bike_rides_2 %>% count(start_hour, sort= TRUE) %>%
+  ggplot()+
+  geom_line((aes(x=start_hour,y=n)))+
+  labs(title="Count of Bike Rides by Hour: Previous 10 months", x="Start Hours", y="Number of Rides")
+
+#converts values from scientific notation 
+options(scipen = 999)
+```
+
+As we can see, there is a obvious decline during night hours, with maximum volume at around 17h.
+
+
+The total number of rides in this dataset was 3200708.
+```{r}
+nrow(bike_rides_2)
+```
+
+There was 1332801 casual rides and 1867907 member during this period.
+
+```{r}
+##count by member type
+bike_rides_2 %>% count(member_type)
+```
+
+
+Regarding the type of bike, docked bikes takes the front with 2530905 rides, followed by electric bikes with 537492 rides, while classic bikes coming last at 132311 bike rides.
+```{r}
+#total rides by bike type
+bike_rides_2 %>%
+  group_by(rideable_type) %>% 
+  count(rideable_type)
+```
+
+Here is a plot to better visualize this data.
+
+```{r}
+bike_rides_2 %>%
+  group_by(rideable_type, member_type) %>%
+  dplyr::summarize(count_trips = n()) %>%  
+  ggplot(aes(x=rideable_type, y=count_trips, fill=member_type, color=member_type)) +
+  geom_bar(stat='identity', position='dodge') +
+  theme_bw()+
+  labs(title="Number of Trips by Bicycle Type", x="Bicycle Type", y="Number of Rides")
+```
+
+
+The average ride during this period was 28.37 minutes while the median was 14.82 minutes.Note that the minimum and maximum values, 0,02 minutes and 58720.03 are not realistic so they are probably due to some external factor like data upload or some faulty equipment.
+
+```{r}
+#mean length of ride
+summary(bike_rides_2$ride_length)
+```
+
+
+While we got already some hints for when we can enroll in a marketing campaign, like send a promotion to subscribe to casual users at the evening, that was showed when the most users will ride our bikes, and also focusing on docked bikes, let's see what data tells us regarding weekdays.
+
+
+
+
+```{r}
+#create column day_of_week 
+bike_rides_2$day_of_week <- wday(bike_rides_2$started_at)
+
+
+
+#plot number of rides by day of week (1 is Sunday)
+bike_rides_2 %>% 
+  group_by(member_type, day_of_week) %>%
+  dplyr::summarize(count_trips = n()) %>%  
+  ggplot(aes(x= day_of_week, y=count_trips, fill=member_type, color=member_type)) +
+  geom_bar(stat='identity', position = 'dodge') +
+  scale_x_continuous(breaks = 1:7, labels = c("1", "2", "3", "4", "5", "6", "7")) + 
+  theme_bw()+
+  labs(title ="Number of Rides by Day of Week", x = "Day of Week", y = "Number of Rides")
+
+```
+
+
+Our most popular day is Saturday and least popular is monday, while most casual members use our bikes on weekends.
+
+What about popular stations for casual riders? 
+
+```{r}
+#Find popular start station for casual
+bike_rides_2 %>%
+  group_by(member_type,start_station_name) %>%
+  dplyr::summarise(number_of_ride = n()) %>%
+  filter(start_station_name != "", "casual" == member_type) %>%
+  arrange(-number_of_ride) %>%
+  head(n=5) %>%
+  select(-member_type)
+```
+
+"Streeter Dr & Grave", "Lake Shore Dr" and "Millenium Park" is our most popular stations for casual riders.
+
+
+## Recommendations
+
+1. **Targeted Promotions:** Leverage the hourly usage patterns to target specific timeframes for marketing promotions. Focus on the peak usage hours, particularly around 17:00, when the number of rides is at its highest. Consider sending promotions or discounts to casual riders during these hours to encourage more rides and potentially convert them to annual members.
+
+2. **Weekend Campaigns:** Since Saturdays are the most popular days for bike rides and weekends generally see higher casual rider activity, design marketing campaigns that specifically target weekends. Offering special weekend-only membership deals or incentives can attract more riders during these days.
+
+3. **Bike Type Emphasis:** Concentrate marketing efforts on docked bikes, as they are the most frequently used bike type. Highlight the benefits of docked bikes in marketing materials, showcasing their availability and convenience, which might encourage more riders to choose this type.
+
+4. **Weekday Strategies:** Implement strategies to boost weekday ridership, especially on Mondays when the usage is lower. Offer special deals or incentives for rides on Mondays to attract more riders on this typically less busy day.
+
+5. **Station Improvement:** Focus on popular start stations like "Streeter Dr & Grave," "Lake Shore Dr," and "Millennium Park." Ensure these stations are well-maintained, easily accessible, and have a sufficient number of available bikes. Enhancing the user experience at these stations can positively impact customer satisfaction and loyalty.
+
+## Conclusion
+
+In this analysis, we explored Cyclistic's bike trip data and gained insights into user behavior. We identified key differences between casual riders and annual members and proposed strategies to increase annual memberships.
+
+
+
