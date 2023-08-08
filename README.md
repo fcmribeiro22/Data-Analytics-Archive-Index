@@ -1,8 +1,21 @@
 # Portfolio: Data Analytics
 
+- ## Analysis Projects
+
+1. ### Cyclistic - How does a bike share navigate speedy success? 🚴‍♂️
+
+- **Repository:** [Cyclistic Analysis Repo](https://github.com/fcmribeiro22/Cyclistic-How-does-a-bike-share-navigate-speedy-success)
+- **Final Report:** [Cyclistic Analysis Report](https://fcmribeiro22.github.io/Cyclistic-How-does-a-bike-share-navigate-speedy-success/)
+
+<br>
+<br>
+<br>
+<br>
+
+
 [Fábio Ribeiro](https://github.com/fcmribeiro22)
 
-Hello! I'm Fábio,a former dynamic salesman who has transitioned into the realm of data analytics. With the recent acquisition of the Google Data Analytics Professional Certificate, I have redirected my focus from product sales to the communication of insights extracted from intricate datasets.
+Hello! I'm Fábio, a former dynamic salesman who has transitioned into the realm of data analytics. With the recent acquisition of the Google Data Analytics Professional Certificate, I have redirected my focus from product sales to the communication of insights extracted from intricate datasets.
 
 My prior engagement with web development led me to an not-so-unexpected affinity for data analytics. I am now delighted to present a portfolio of data analysis projects that highlight my adeptness in extracting valuable insights, solving intricate problems, and utilizing data to facilitate informed decision-making.
 
@@ -22,13 +35,6 @@ My inclination towards data analytics is rooted in my longstanding analytical di
 - Statistical Analysis
 - Problem-Solving through Data
 - [Any other relevant skills]
-
-- ## Analysis Projects
-
-1. ### Cyclistic - How does a bike share navigate speedy success? 🚴‍♂️
-
-- **Repository:** [Cyclistic Analysis Repo](https://github.com/fcmribeiro22/Cyclistic-How-does-a-bike-share-navigate-speedy-success)
-- **Final Report:** [Cyclistic Analysis Report](https://fcmribeiro22.github.io/Cyclistic-How-does-a-bike-share-navigate-speedy-success/)
 
 
 
