@@ -31,10 +31,12 @@ My inclination towards data analytics is rooted in my longstanding analytical di
 
 - Data Cleaning and Preprocessing
 - Exploratory Data Analysis
-- Data Visualization
+- Data Visualization 
 - Statistical Analysis
 - Problem-Solving through Data
-- [Any other relevant skills]
+- SQL
+- R
+- Tableau
 
 
 
