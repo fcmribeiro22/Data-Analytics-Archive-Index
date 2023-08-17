@@ -1,6 +1,6 @@
 # Portfolio: Data Analytics
 
-- ## Analysis Projects
+- ## Projects
 
 1. ### Cyclistic - How does a bike share navigate speedy success? 🚴‍♂️
 
