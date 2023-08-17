@@ -28,19 +28,18 @@ My inclination towards data analytics is rooted in my longstanding analytical di
 ## About Me
 
 - 🎓 Google Data Analytics Professional Certified.
-- 💼 Formerly a high-achieving salesman, leveraging persuasive skills to close deals and exceed targets.
+- 💼 Formerly a high-achieving salesman, leveraging communication skills to close deals and exceed targets.
 - 🌐 [LinkedIn Profile](https://www.linkedin.com/in/f%C3%A1bio-ribeiro-760621253/) 
 
 ## Skills
 
+- SQL
+- R
+- Tableau
 - Data Cleaning and Preprocessing
 - Exploratory Data Analysis
 - Data Visualization 
 - Statistical Analysis
-- Problem-Solving through Data
-- SQL
-- R
-- Tableau
 
 
 
