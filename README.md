@@ -7,6 +7,10 @@
 - **Repository:** [Cyclistic Analysis Repo](https://github.com/fcmribeiro22/Cyclistic-How-does-a-bike-share-navigate-speedy-success)
 - **Final Report in RMarkdown:** [Cyclistic Analysis Report](https://fcmribeiro22.github.io/Cyclistic-How-does-a-bike-share-navigate-speedy-success/)
 
+2. ### COVID19 -GlobalInsights
+- **Repository: ** [Covi19-Global Insights Repo](https://github.com/fcmribeiro22/COVID19-Global-Insights)
+  
+
 <br>
 <br>
 <br>
