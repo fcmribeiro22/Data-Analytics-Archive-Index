@@ -8,7 +8,7 @@
 - **Final Report in RMarkdown:** [Cyclistic Analysis Report](https://fcmribeiro22.github.io/Cyclistic-How-does-a-bike-share-navigate-speedy-success/)
 
 2. ### COVID19 -Global Insights 🌍🦠
-- **Repository:** [Covi19-Global Insights Repo](https://github.com/fcmribeiro22/COVID19-Global-Insights)
+- **Repository:** [Covid-19-Global Insights Repo](https://github.com/fcmribeiro22/COVID19-Global-Insights)
 
 3. ### Data Cleaning in SQL 🧹📊
 - **Repository:**[Data Cleaning in SQL Repo](https://github.com/fcmribeiro22/Data-Cleaning-in-SQL)
