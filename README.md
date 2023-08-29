@@ -43,7 +43,7 @@
 
 [All misc projects](https://github.com/fcmribeiro22)
 
-Hello! I'm Fábio, a former dynamic salesman transictioning into technology. With the recent acquisition of the Google Data Analytics Professional Certificate, I have redirected my focus from product sales to the communication of insights.
+Hello! I'm Fábio, a former dynamic salesman. With the recent acquisition of the Google Data Analytics Professional Certificate, I have redirected my focus from product sales to the communication of insights.
 
 My engagement with web development led me to an not-so-unexpected affinity for data analytics. I am now delighted to present a portfolio of data analysis projects that highlight my adeptness in extracting valuable insights, solving intricate problems, and utilizing data to drive informed decision-making.
 
