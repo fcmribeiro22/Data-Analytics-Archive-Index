@@ -18,6 +18,10 @@
 4. ### Data Cleaning in SQL 🧹📊
 - **Repository:**[Data Cleaning in SQL Repo](https://github.com/fcmribeiro22/Data-Cleaning-in-SQL)
 - **SQL Script:**[Script](https://github.com/fcmribeiro22/Data-Cleaning-in-SQL/blob/main/Data_Cleaning_in_SQL.sql)
+
+5. ### Automated Crypto Website API Pull
+- **Repository:** [Automated Crypto Website API Pull Repo](https://github.com/fcmribeiro22/Automated-Crypto-Website-API-pull)
+- **Jupyter Notebook:** [[Jupyter Notebook](https://github.com/fcmribeiro22/Castro-Eletronica-Web-Scraper/blob/main/Castro%20Eletr%C3%B3nica%20Web%20Scraper%20Project.ipynb](https://github.com/fcmribeiro22/Automated-Crypto-Website-API-pull/blob/main/Automated%20Crypto%20Website%20API%20Pull%20.ipynb))
   
   
 ## About Me
