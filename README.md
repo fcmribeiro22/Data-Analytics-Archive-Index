@@ -9,7 +9,7 @@
 
 2. ### COVID19 -Global Insights 🌍🦠
 - **Repository:** [Covid-19-Global Insights Repo](https://github.com/fcmribeiro22/COVID19-Global-Insights)
-- **Tableau Dashboard:**
+- **Tableau Dashboard:** [Tableau Dashboard](https://github.com/fcmribeiro22/COVID19-Global-Insights/blob/main/Visualizations/Covid-19-Global_Insights_Dashboard.png)
   
 3. ### Castro Eletrónica Web Scraper 🛍️🕸️
 - **Repository:** [Castro Eletrónica Web Scraper Repo](https://github.com/fcmribeiro22/Castro-Eletronica-Web-Scraper)
