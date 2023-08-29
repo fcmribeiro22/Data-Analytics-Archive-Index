@@ -9,8 +9,13 @@
 
 2. ### COVID19 -Global Insights 🌍🦠
 - **Repository:** [Covid-19-Global Insights Repo](https://github.com/fcmribeiro22/COVID19-Global-Insights)
+- **Tableau Dashboard:**
+  
+3. ### Castro Eletrónica Web Scraper 🛍️🕸️
+- **Repository:** [Castro Eletrónica Web Scraper Repo](https://github.com/fcmribeiro22/Castro-Eletronica-Web-Scraper)
+- **Jupyter Notebook:** [Jupyter Notebook](https://github.com/fcmribeiro22/Castro-Eletronica-Web-Scraper/blob/main/Castro%20Eletr%C3%B3nica%20Web%20Scraper%20Project.ipynb)
 
-3. ### Data Cleaning in SQL 🧹📊
+4. ### Data Cleaning in SQL 🧹📊
 - **Repository:**[Data Cleaning in SQL Repo](https://github.com/fcmribeiro22/Data-Cleaning-in-SQL)
   
 
