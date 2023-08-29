@@ -17,6 +17,7 @@
 
 4. ### Data Cleaning in SQL 🧹📊
 - **Repository:**[Data Cleaning in SQL Repo](https://github.com/fcmribeiro22/Data-Cleaning-in-SQL)
+- **SQL Script:**[Script](https://github.com/fcmribeiro22/Data-Cleaning-in-SQL/blob/main/Data_Cleaning_in_SQL.sql)
   
 
 <br>
