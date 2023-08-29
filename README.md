@@ -19,11 +19,14 @@
 - **Repository:**[Data Cleaning in SQL Repo](https://github.com/fcmribeiro22/Data-Cleaning-in-SQL)
 - **SQL Script:**[Script](https://github.com/fcmribeiro22/Data-Cleaning-in-SQL/blob/main/Data_Cleaning_in_SQL.sql)
   
+  
 ## About Me
 
 - 🎓 Google Data Analytics Professional Certified.
 - 💼 Formerly a high-achieving salesman, leveraging communication skills to close deals and exceed targets.
-- 🌐 [LinkedIn Profile](https://www.linkedin.com/in/f%C3%A1bio-ribeiro-760621253/) 
+- 🌐 [LinkedIn Profile](https://www.linkedin.com/in/f%C3%A1bio-ribeiro-760621253/)
+
+  
 
 ## Skills
 
