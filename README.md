@@ -16,16 +16,11 @@
 
 <br>
 <br>
+Hello! I'm Fábio, a former dynamic salesman transictioning into technology. With the recent acquisition of the Google Data Analytics Professional Certificate, I have redirected my focus from product sales to the communication of insights.
 
+My engagement with web development led me to an not-so-unexpected affinity for data analytics. I am now delighted to present a portfolio of data analysis projects that highlight my adeptness in extracting valuable insights, solving intricate problems, and utilizing data to drive informed decision-making.
 
-
-[Fábio Ribeiro](https://github.com/fcmribeiro22)
-
-Hello! I'm Fábio, a former dynamic salesman who has transitioned into the realm of data analytics. With the recent acquisition of the Google Data Analytics Professional Certificate, I have redirected my focus from product sales to the communication of insights extracted from intricate datasets.
-
-My prior engagement with web development led me to an not-so-unexpected affinity for data analytics. I am now delighted to present a portfolio of data analysis projects that highlight my adeptness in extracting valuable insights, solving intricate problems, and utilizing data to facilitate informed decision-making.
-
-My inclination towards data analytics is rooted in my longstanding analytical disposition. A predilection for informed decisions based on statistical advantage, as well as a penchant for relying on facts rather than conjecture to address queries, further underpin my affinity for this field.
+My inclination towards data analytics is rooted in my longstanding analytical disposition, a predilection for informed decisions based on statistical advantage, as well as a tendence for relying on facts rather than conjecture.
 
 ## About Me
 
@@ -36,20 +31,19 @@ My inclination towards data analytics is rooted in my longstanding analytical di
 ## Skills
 
 - SQL
+- Python
 - R
 - Tableau
 - Data Cleaning and Preprocessing
 - Exploratory Data Analysis
 - Data Visualization 
-- Statistical Analysis
 
+[All misc projects](https://github.com/fcmribeiro22)
 
 
 ## Contact
 
 Feel free to reach out to me via [LinkedIn](https://www.linkedin.com/in/f%C3%A1bio-ribeiro-760621253/) or [Email](mailto:fcmribeiro22@gmail.com). 
-
-Thank you for visiting my portfolio!
 
 Fábio Ribeiro
 
