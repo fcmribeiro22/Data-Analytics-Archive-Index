@@ -36,7 +36,6 @@ My inclination towards data analytics is rooted in my longstanding analytical di
 - Tableau
 - Data Cleaning and Preprocessing
 - Exploratory Data Analysis
-- Data Visualization 
 
 [All misc projects](https://github.com/fcmribeiro22)
 
