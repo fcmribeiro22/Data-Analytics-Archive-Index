@@ -28,7 +28,7 @@
 
 - 🎓 Google Data Analytics Professional Certified.
 - 💼 Formerly a high-achieving salesman, leveraging communication skills to close deals and exceed targets.
-- 🌐 [LinkedIn Profile](https://www.linkedin.com/in/f%C3%A1bio-ribeiro-760621253/)
+- 🌐 [LinkedIn Profile](https://www.linkedin.com/in/fcmribeiro/)
 
   
 
@@ -42,12 +42,6 @@
 - Exploratory Data Analysis
 
 [All misc projects](https://github.com/fcmribeiro22)
-
-Hello! I'm Fábio, a former dynamic salesman. With the recent acquisition of the Google Data Analytics Professional Certificate, I have redirected my focus from product sales to the communication of insights.
-
-My engagement with web development led me to an not-so-unexpected affinity for data analytics. I am now delighted to present a portfolio of data analysis projects that highlight my adeptness in extracting valuable insights, solving intricate problems, and utilizing data to drive informed decision-making.
-
-My inclination towards data analytics is rooted in my longstanding analytical disposition, a predilection for informed decisions based on statistical advantage, as well as a tendence for relying on facts rather than conjecture.
 
 
 
