@@ -45,10 +45,4 @@
 
 
 
-## Contact
-
-Feel free to reach out to me via [LinkedIn](https://www.linkedin.com/in/f%C3%A1bio-ribeiro-760621253/) or [Email](mailto:fcmribeiro22@gmail.com). 
-
-Fábio Ribeiro
-
 
