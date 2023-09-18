@@ -28,7 +28,7 @@
 
 - 🎓 Google Data Analytics Professional Certified.
 - 💼 Formerly a high-achieving salesman, leveraging communication skills to close deals and exceed targets.
-- 🌐 [LinkedIn Profile](https://www.linkedin.com/in/fcmribeiro/)
+
 
   
 
