@@ -27,7 +27,7 @@
 ## About Me
 
 - 🎓 Google Data Analytics Professional Certified.
-- 💼 Formerly a high-achieving salesman, leveraging communication skills to close deals and exceed targets.
+- 💼 High-achieving salesman, leveraging communication skills to close deals and exceed targets.
 
 
   
