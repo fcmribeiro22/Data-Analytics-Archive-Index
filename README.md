@@ -32,7 +32,7 @@
 
   
 
-## Skills
+## Skills used in this Repository
 
 - SQL
 - Python
@@ -41,7 +41,7 @@
 - Data Cleaning and Preprocessing
 - Exploratory Data Analysis
 
-[All misc projects](https://github.com/fcmribeiro22)
+[Home Page](https://github.com/fcmribeiro22)
 
 
 
