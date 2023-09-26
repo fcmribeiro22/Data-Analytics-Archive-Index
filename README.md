@@ -21,7 +21,7 @@
 
 5. ### Cryptocurrency Market Data Analysis- Automated API Pull 🚀💎
 - **Repository:** [Automated Crypto Website API Pull Repo](https://github.com/fcmribeiro22/Automated-Crypto-Website-API-pull)
-- **Jupyter Notebook:** [Jupyter Notebook](https://github.com/fcmribeiro22/Cryptocurrency-Market-Data-Analysis/blob/main/Automated%20Crypto%20Website%20API%20Pull%20.ipynb))
+- **Jupyter Notebook:** [Jupyter Notebook](https://github.com/fcmribeiro22/Cryptocurrency-Market-Data-Analysis/blob/main/Automated%20Crypto%20Website%20API%20Pull%20.ipynb)
   
   
 ## About Me
